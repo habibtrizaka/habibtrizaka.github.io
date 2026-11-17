@@ -1,34 +1,27 @@
-body {
-  margin: 0;
-  font-family: 'PlusJakartaSans' !important;
-  font-weight: 100;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Custom scrollbar for horizontal project list */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
 }
 
-@font-face {
-  font-family: 'PlusJakartaSans';
-  font-weight: 100;
-  src: local('PlusJakartaSans'), url(./fonts/PlusJakartaSans-Regular.ttf) format('truetype');
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-@font-face {
-  font-family: 'PlusJakartaSans';
-  font-weight: 800;
-  src: local('PlusJakartaSans'), url(./fonts/PlusJakartaSans-Bold.ttf) format('truetype');
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
 }
 
-@font-face {
-  font-family: 'PlusJakartaSans';
-  font-weight: 900;
-  src: local('PlusJakartaSans'), url(./fonts/PlusJakartaSans-ExtraBold.ttf) format('truetype');
-}
-
-* {
-  box-sizing: border-box;
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #0d5eb9;
 }
